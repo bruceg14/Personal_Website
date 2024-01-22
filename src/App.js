@@ -21,16 +21,10 @@ import Linux_Icon from './img/Linux_Icon.jpeg'
 import Tailwind_Icon from './img/TailwindCSS_Icon.jpeg'
 import Django_Icon from './img/Django_Icon.png'
 
+import {Button, ButtonGroup, Box, Typography, }  from '@mui/material';
 
 const Education = () => {
   return(
-    // <div className="flex flex-col justify-start items-center">
-    //   <div className=" hover:bg-neutral-100 padding-2 flex flex-col justify-center items-center rounded-lg">
-    //     <h1 className="text-4xl font-serif font-bold text-gray-700 mt-4">Education</h1>
-    //     <img src={Vanderbilt_Picture} alt="Vanderbilt University Picture" className="w-3/4 object-contain" />
-    //     <p>I am a fourth year student at Vanderbilt University. I am expected to graduate in Fall 2023.</p>
-    //   </div>
-    // </div> 
     <div className="bg-white rounded-lg shadow-md p-8">
       <div className="flex items-center mb-4">
         <img
@@ -41,8 +35,7 @@ const Education = () => {
         <h2 className="text-2xl font-bold">Education</h2>
       </div>
       <p className="text-gray-600">
-        I attended Vanderbilt University where I pursued Bachelor Degree in Computer Science. I am expected to graduate in 
-        Fall 2023, and my cumulative GPA is 3.870.
+        I graduated at Vanderbilt University in December 2023 with a Bachelor of Science in Computer Science with a cumulative 3.873 / 4.0 GPA.
       </p>
     </div>
   )
@@ -55,8 +48,22 @@ const SkillSet = () => {
   const skillSet_icons=[React_Icon, React_Native, MongoDB_Icon, Express_Icon, Tailwind_Icon, AWS_Icon, 
     Git_Icon, SQL_Icon, Linux_Icon, Django_Icon]
   return (
-    <div className="flex justify-evenly hover:bg-neutral-100 rounded-lg">
-      <div >
+    <div className="flex justify-start hover:bg-neutral-100 bg-white rounded-lg">
+      <div className=" p-8">
+        <div className="flex items-center mb-1">
+          <h2 className="text-1xl font-bold">Experienced Languages</h2>
+        </div>
+        <p className="text-gray-600">
+          JavaScript, TypeScript, Python, C#, C++, Java 
+        </p>
+        <div className="flex items-center mb-4 mt-6">
+          <h2 className="text-1xl font-bold">Experienced Technologies and Framworks</h2>
+        </div>
+        <p className="text-gray-600">
+          React, Next.js, ASP .NET, Firebase, MongoDB, AWS, Azure, Google Cloud Platform, REST API, CI/CD
+        </p>
+      </div>
+      {/* <div >
         <h1 className="p-6 font-extrabold text-gray-700 text-4xl">Languages</h1>
         <ul role="list" className="p-6 max-h-200 overflow-y-auto">
           {languages_icons.map((item, index) => {
@@ -76,7 +83,7 @@ const SkillSet = () => {
             )
           })}
         </ul>
-      </div>
+      </div> */}
     </div>
   )
 }
@@ -87,9 +94,9 @@ const WorkExperience = () => {
     {
       id: 1,
       title: 'Undergraduate Researcher, HIDe Lab at Vanderbilt University',
-      date: 'May 2023 - Present',
+      date: 'May 2023 - December 2023',
       content: 
-        'Researched with Prof. Dana Zhang for developing an interoperable and efficient identity system using distributed ledger technologies. Designed and implemented a mobile decentralized application using React-native that allow user to store and share their information using Hyperledger technology'  },
+        'Researched with Prof. Dana Zhang for developing an interoperable and efficient identity system using distributed ledger technologies. \nDesigned and implemented a mobile decentralized application using React-native that allow user to store and share their information using Hyperledger technology'  },
     {
       id: 2,
       title: 'Mobile Application Development Intern at Give Black',
@@ -107,7 +114,14 @@ const WorkExperience = () => {
         <li key={document.id} className="border border-gray-300 p-4 rounded hover:bg-neutral-100 ">
           <h2 className="text-xl font-bold">{document.title}</h2>
           <p className="text-gray-600">{document.date}</p>
-          <p>{document.content}</p>
+          {document.content.split('\n').map((val, index) => {
+            return(
+              <React.Fragment key={index}>
+                <p className="mb-3">{val}</p>
+
+              </React.Fragment>
+            )
+          })}
         </li>
       ))}
     </ul>
@@ -211,8 +225,8 @@ function App() {
 
   return (
     
-    <div className="w-screen h-800 bg-neutral-200 leading-relaxed selection:bg-blue-300 antialiased">
-      <div className="bg-slate-200 pt-2 pb-4">
+    <div className="w-screen h-800 bg-neutral-200 leading-relaxed selection:bg-blue-300 antialiased ">
+      <div className="bg-slate-200 pt-2 pb-4 ">
         <h1 className=" font-serif items-center justify-center flex text-5xl m-2 " >Bruce Guo</h1>
         <div className="flex flex-row pb-4">
           <div class="basis-1/3 items-center justify-center flex ">
@@ -247,22 +261,24 @@ function App() {
 
       <div className="flex border-t-2 border-black">
         <div className="w-1/3 h-screen">
-          <div className="h-full flex flex-col justify-start items-end p-4">
-            <div className=" w-3/4 mb-4 mt-10" onClick={handlePersonal}>
-              <h2 className={personalProject ? selected : notSelected}>Personal Project</h2>
-              {/* <h2 className={education ? selected : notSelected}>Education</h2> */}
-            </div>
-            <div className=" w-3/4 mb-4" onClick={handleSkillSet}>
-              <h2 className={skillSet ? selected : notSelected}>Skill Set</h2>
-            </div>
-            <div className=" w-3/4  mb-4" onClick={handleEducation}>
-            <h2 className={education ? selected : notSelected}>Education</h2>
-              {/* <h2 className={personalProject ? selected : notSelected}>Personal Project</h2> */}
-            </div>
-            <div className=" w-3/4  mb-4" onClick={handleWork}>
-              <h2 className={workExperience ? selected : notSelected}>Work Experience</h2>
-            </div>
-            
+          <div className="h-full flex flex-col justify-start items-start p-4">
+            <Box sx={{marginTop: "10%", }}>
+              <Button className=" w-3/4 mb-4 mt-5" onClick={handlePersonal}>
+                <h2 className={personalProject ? selected : notSelected}>Personal Project</h2>
+                {/* <h2 className={education ? selected : notSelected}>Education</h2> */}
+              </Button>
+              <Button className=" w-3/4 mb-4 mt-5" onClick={handleSkillSet}>
+                <h2 className={skillSet ? selected : notSelected}>Skill Set</h2>
+              </Button>
+              <Button className=" w-3/4  mb-4 mt-5" onClick={handleEducation}>
+                <h2 className={education ? selected : notSelected}>Education</h2>
+                {/* <h2 className={personalProject ? selected : notSelected}>Personal Project</h2> */}
+              </Button>
+              <Button className=" w-3/4  mb-4 mt-5" onClick={handleWork}>
+                <h2 className={workExperience ? selected : notSelected}>Work Experience</h2>
+              </Button>
+            </Box>
+          
           </div>
         </div>
         <div className="w-2/3 h-full">
