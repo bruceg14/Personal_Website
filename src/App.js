@@ -4,7 +4,8 @@ import Vanderbilt_Picture from './img/Vandy_Icon.jpeg'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import {Button, ButtonGroup, Box, Typography, }  from '@mui/material';
+import {Button, ButtonGroup, Box, Typography, Card, Tooltip}  from '@mui/material';
+import JobHuntingRecord from './img/JobHuntingRecord.png'
 
 const Education = () => {
   return(
@@ -93,38 +94,42 @@ const PersonalProject = () => {
     <div className="p-8">
       <ul>
         <li className="border border-gray-300 p-4 rounded hover:bg-gray-100 ">
-        <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-4xl font-bold mb-4">Job Hunting Record</h1>
+            <p className="text-gray-600 mb-4">
+              An React web application document my job application process starting February 2024. Applied Java Spring Boot for back-end development. 
+            </p>
+            <div className="mb-4">
+              <a
+                href="https://jobhuntingrecord.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
+              >
+                View This Website
+              </a>
+            </div>
+
+            <Tooltip title="Go to my Job Huniting Record Website" placement="left" >
+              <Card sx={{ backgroundColor: '#444444', p: 1, 
+                 }}>
+                <a href="https://jobhuntingrecord.vercel.app/">
+                  <img src={JobHuntingRecord} alt="Job Hunting Web Screen Shot" />
+                </a>
+              </Card>
+            </Tooltip>
+
+            
+          </div>
+        </li>
+        <li className="border border-gray-300 p-4 rounded hover:bg-gray-100 mt-5">
+          <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold mb-4">Duckling</h1>
             <p className="text-gray-600 mb-6">
               This project apply Next.js for front-end development and Express.js for back-end API. It is an social media web application
               that is designed for people to showcase their fashion choice and let people choose their outfit base on others rating.
               It is deployed on Vercel and it is still a work in progress. 
             </p>
-
-            {/* <div className="relative w-full h-0" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/79G3GIm39-E"
-                title="Wok-Finder Video"
-                allowFullScreen
-              />
-            </div>
-
-            <div className="mt-6">
-              <a
-                href="https://github.com/Food-App-Dev-Team/Food_App_React-native"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
-              >
-                View Project Repository
-              </a>
-            </div> */}
-
-            {/* <h2 className="text-2xl font-bold mt-8">About</h2>
-            <p className="mt-2">
-              All the functionality, user interface, backend API call and database set up occured in the video are designed and wrote by me. 
-            </p> */}
           </div>
         </li>
         <li className="border border-gray-300 p-4 rounded hover:bg-gray-100 mt-5">
