@@ -1,27 +1,61 @@
 const projects = [
   {
-    name: "ATex",
-    tagline: "AI-Assisted Web LaTeX Environment",
+    name: "Oak",
+    tagline: "Branching LLM Chat App",
+    url: "https://chatwithoak.com",
     summary:
-      "A high-performance, web-based LaTeX environment built to handle real-time document compilation and AI-assisted troubleshooting within a containerized microservices architecture.",
+      "A full-stack LLM chat app with persistent branching conversations — open side threads from selected text and merge them back into the main conversation.",
     highlights: [
       {
-        label: "Architecture",
-        text: "Responsive React + FastAPI application using Tectonic for high-performance containerized LaTeX compilation. Integrated Supabase for relational data storage and authentication.",
+        label: "Streaming APIs",
+        text: "Implemented Next.js APIs for streaming Gemini responses through server-sent events (SSE), with optional context sharing between main and branch conversations.",
       },
       {
-        label: "System Design",
-        text: "Asynchronous compilation workflow using Redis task queues. Integrated the Gemini API for AI-assisted error diagnostics and troubleshooting suggestions.",
+        label: "Data Model",
+        text: "Modeled conversations, messages, and branch relationships in PostgreSQL, supporting persistent histories, ordered messages, and cascading deletion.",
+      },
+      {
+        label: "Auth & Deployment",
+        text: "Integrated Google sign-in through Supabase Auth and deployed the app on a Linux server using Docker and Nginx.",
       },
     ],
     stack: [
-      "React",
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Supabase",
+      "Gemini API",
+      "Docker",
+    ],
+  },
+  {
+    name: "Atex",
+    tagline: "Web LaTeX Editor",
+    url: "https://atex.ink",
+    summary:
+      "A full-stack LaTeX editor with multi-file editing, autosave, and side-by-side PDF previews, built with React and FastAPI.",
+    highlights: [
+      {
+        label: "Async Compilation",
+        text: "Moved synchronous compilation to Redis-backed Celery workers, offloading multi-file Tectonic builds from API requests and delivering generated PDFs through signed URLs.",
+      },
+      {
+        label: "AI Rewrites",
+        text: "Integrated Gemini for academic rewrites, validating structured responses and designing prompts to preserve LaTeX commands.",
+      },
+      {
+        label: "Infrastructure",
+        text: "Orchestrated separate API, compilation worker, Redis, and Nginx services using Docker Compose.",
+      },
+    ],
+    stack: [
+      "Next.js",
+      "TypeScript",
       "FastAPI",
       "Python",
+      "Celery",
       "Redis",
       "Supabase",
-      "Tectonic",
-      "Gemini API",
       "Docker",
     ],
   },
@@ -40,11 +74,21 @@ export default function Projects() {
               key={p.name}
               className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
             >
-              <div className="mb-4">
-                <h3 className="text-2xl font-bold text-gray-900">{p.name}</h3>
-                <p className="text-red-600 font-medium text-sm mt-0.5">
-                  {p.tagline}
-                </p>
+              <div className="mb-4 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">{p.name}</h3>
+                  <p className="text-red-600 font-medium text-sm mt-0.5">
+                    {p.tagline}
+                  </p>
+                </div>
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-500 hover:text-red-600 transition-colors font-medium shrink-0"
+                >
+                  {p.url.replace("https://", "")} ↗
+                </a>
               </div>
 
               <p className="text-gray-600 text-sm leading-relaxed mb-5">

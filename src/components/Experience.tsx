@@ -3,19 +3,19 @@ const experiences = [
     company: "Electronic Arts (EA)",
     role: "Graduate Research Intern (Mitacs)",
     location: "Edmonton, Canada",
-    period: "May 2025 – Present",
+    period: "May 2025 – Aug 2026",
     bullets: [
       {
-        title: "Agentic RAG & LLM Orchestration",
-        body: "Architected and implemented distributed LLM agent strategies in Go to automate complex report generation. Developed Agentic RAG workflows with autonomous tool-calling to synthesize natural language prompts into actionable developer metrics.",
+        title: "Blueprint Diff Tooling",
+        body: "Reverse-engineered the Unreal Engine Blueprint text format through black-box analysis and implemented text generation from SQL records for a Blueprint diff tool.",
       },
       {
-        title: "Data Pipeline Engineering",
-        body: "Designed an enrichment pipeline to ingest high-dimensional data into Elasticsearch via a multi-stage lookup process — extracting key identifiers, retrieving metadata, and merging disparate datasets into a unified, real-time searchable index.",
+        title: "RAG Agent Query Generation",
+        body: "Developed Go query-generation tools for an internal RAG agent used by 315 users, translating LLM-extracted intent into valid Elasticsearch aggregation queries for summaries and reports.",
       },
       {
-        title: "High-Performance Tooling",
-        body: "Built a proprietary binary-to-textual conversion engine for Unreal Engine Blueprints, enabling high-speed HTML rendering of visual logic from SQL databases without requiring engine compilation.",
+        title: "Agent Reliability",
+        body: "Analyzed user conversations to identify agent failures and debugged issues in internal data retrieval and analysis workflows.",
       },
     ],
   },

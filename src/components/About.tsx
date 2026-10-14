@@ -8,32 +8,34 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div>
             <p className="text-gray-600 leading-relaxed mb-4">
-              I&apos;m a M.Sc. Computing Science student at the University of
-              Alberta and a{" "}
-              <span className="font-semibold text-gray-800">Mitacs Fellow</span>{" "}
-              embedded at Electronic Arts, where I focus on{" "}
+              I&apos;m a software engineer based in Montreal. I recently
+              completed my M.Sc. in Computing Science at the University of
+              Alberta, and spent over a year as a{" "}
               <span className="font-semibold text-gray-800">
-                Developer Productivity
+                Mitacs Graduate Research Intern
+              </span>{" "}
+              at Electronic Arts working on{" "}
+              <span className="font-semibold text-gray-800">
+                developer tooling
               </span>{" "}
               and{" "}
               <span className="font-semibold text-gray-800">
-                Scalable AI Systems
+                LLM-powered agents
               </span>
               .
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              My research develops static analysis frameworks for Visual
-              Programming Languages — adapting classical code complexity metrics
-              like Cyclomatic Complexity and Halstead Volume to node-based
-              systems such as Unreal Engine Blueprints and Unity Visual
-              Scripting.
+              My thesis adapted classical software metrics to Visual
+              Programming Languages — node-based systems such as Unreal Engine
+              Blueprints and Unity Visual Scripting — backed by data mined from
+              over 11,000 game repositories.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              In industry, I&apos;ve designed distributed LLM agent
-              architectures in Go, built Elasticsearch data pipelines for
-              real-time developer analytics, and engineered a binary-to-textual
-              conversion engine for Unreal Engine. I bridge complex data
-              infrastructure with actionable engineering workflows.
+              At EA, I built Go query-generation tools for an internal RAG
+              agent used by 315 people and reverse-engineered the Unreal
+              Engine Blueprint text format for a diff tool. On my own time, I
+              build and deploy full-stack apps like Oak and Atex with Next.js,
+              FastAPI, PostgreSQL, and Docker.
             </p>
           </div>
 
@@ -45,7 +47,7 @@ export default function About() {
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-red-500 mt-0.5">▸</span>
-                  M.Sc. Computing Science, University of Alberta (2024–Present)
+                  M.Sc. Computing Science, University of Alberta (2024–2026)
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-red-500 mt-0.5">▸</span>
@@ -53,7 +55,7 @@ export default function About() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-red-500 mt-0.5">▸</span>
-                  Graduate Research Intern at Electronic Arts via Mitacs
+                  Graduate Research Intern at Electronic Arts via Mitacs (2025–2026)
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-red-500 mt-0.5">▸</span>
@@ -61,7 +63,7 @@ export default function About() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-red-500 mt-0.5">▸</span>
-                  Based in Edmonton, Canada
+                  Based in Montreal, Canada · Open to relocating anywhere in Canada
                 </li>
               </ul>
             </div>
@@ -71,9 +73,9 @@ export default function About() {
                 Research Interest
               </h3>
               <p className="text-sm text-gray-700">
-                Static analysis of Visual Programming Languages (VPLs) —
-                quantifying software complexity in node-based environments like
-                Unreal Engine Blueprints and Unity Visual Scripting.
+                Software metrics for Visual Programming Languages (VPLs) —
+                measuring node-based code like Unreal Engine Blueprints and
+                Unity Visual Scripting, and comparing it with textual code.
               </p>
             </div>
           </div>

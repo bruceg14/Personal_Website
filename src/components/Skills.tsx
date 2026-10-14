@@ -4,34 +4,28 @@ const skillGroups = [
     skills: ["Go", "Python", "TypeScript", "JavaScript", "SQL"],
   },
   {
-    category: "Frameworks & Libraries",
-    skills: ["React", "FastAPI", "Next.js"],
+    category: "Frameworks",
+    skills: ["React", "Next.js", "FastAPI", "Celery", "Tailwind CSS"],
   },
   {
-    category: "AI / ML Systems",
+    category: "Databases",
+    skills: ["PostgreSQL", "Redis", "Elasticsearch"],
+  },
+  {
+    category: "Tools",
+    skills: ["Docker", "Docker Compose", "Nginx", "Linux", "Supabase", "pytest"],
+  },
+  {
+    category: "AI / LLM Systems",
+    skills: ["RAG Agents", "Gemini API", "SSE Streaming", "Prompt Design"],
+  },
+  {
+    category: "Research Areas",
     skills: [
-      "LLM Orchestration",
-      "Agentic RAG",
-      "Gemini API",
-      "Autonomous Tool-Calling",
-    ],
-  },
-  {
-    category: "Data & Infrastructure",
-    skills: ["Elasticsearch", "Redis", "Supabase", "Docker", "PostgreSQL"],
-  },
-  {
-    category: "Tools & Platforms",
-    skills: ["Git", "Unreal Engine Blueprints", "Unity Visual Scripting"],
-  },
-  {
-    category: "Software Engineering",
-    skills: [
-      "System Design",
-      "RESTful APIs",
       "Static Analysis",
-      "Design Patterns",
-      "Microservices",
+      "Mining Software Repositories",
+      "Unreal Engine Blueprints",
+      "Unity Visual Scripting",
     ],
   },
 ];

@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Bruce Guo — Software Engineer & Researcher",
   description:
-    "M.Sc. Computing Science student and Mitacs Fellow focused on Developer Productivity and Scalable AI Systems.",
+    "Software engineer in Montreal building full-stack web apps, LLM-powered tools, and developer tooling. M.Sc. Computing Science, University of Alberta.",
 };
 
 export default function RootLayout({

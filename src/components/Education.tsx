@@ -4,9 +4,9 @@ const education = [
     degree: "Master of Science (With Thesis)",
     area: "Computing Science",
     location: "Edmonton, Canada",
-    period: "Sep 2024 – Present",
+    period: "Sep 2024 – Sep 2026 (requirements completed)",
     detail:
-      "Research focused on the development of static analysis frameworks for Visual Programming Languages (VPLs). Engineered a custom methodology to adapt textual code metrics — LOC, Halstead Volume, and Cyclomatic Complexity — to node-based architectures such as Unreal Engine Blueprint and Unity Visual Scripting.",
+      "Thesis research on software metrics for Visual Programming Languages (VPLs). Proposed and validated three adapted software metrics for node-based code such as Unreal Engine Blueprints and Unity Visual Scripting, and compared metric magnitudes across visual and textual code.",
   },
   {
     school: "Vanderbilt University",

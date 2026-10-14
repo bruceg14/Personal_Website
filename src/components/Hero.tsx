@@ -8,7 +8,7 @@ export default function Hero() {
         {/* Status badge */}
         <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-sm font-medium px-4 py-1.5 rounded-full mb-8">
           <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          Seeking Full-Stack & Software Engineering Roles | Available Sept 2026
+          Seeking Full-Stack & Software Engineering Roles | Available Now
         </div>
 
         <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
@@ -16,13 +16,13 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl sm:text-2xl text-red-600 font-medium mb-6">
-          M.Sc. Computing Science · Mitacs Fellow
+          Software Engineer · M.Sc. Computing Science
         </p>
 
         <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10">
-          Building scalable AI systems and high-performance developer tooling.
-          Currently researching static analysis for Visual Programming Languages
-          at the University of Alberta, with industry experience at{" "}
+          Building full-stack web apps, LLM-powered tools, and developer
+          tooling. M.Sc. in Computing Science from the University of Alberta,
+          with industry experience at{" "}
           <span className="font-semibold text-gray-800">Electronic Arts</span>.
         </p>
 
